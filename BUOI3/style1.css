@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    border: 1px solid green;
+    padding: 10px 10px 20px 10px;
+    border-radius: 5px;
+    background-color: greenyellow;
+}
+
+button{
+    color: white;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    background-color: green;
+    border: none;
+    padding: 20px 40px;
+    box-shadow: 0 10px 0 #024b02;
+    border-radius: 5px;
+}
+
+button:active{
+    transform: translateY(10px);
+    box-shadow: 0 1px 0 #024b02;
+    border-radius: 5px;
+}

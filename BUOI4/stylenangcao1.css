@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ccc;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+/* Set cấu hình side bar */
+.side-bar{
+    position: absolute;
+    border: 1px solid black;
+    width: 70px;
+    height: 100%;
+    background-color: black;
+    padding: 20px 20px;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+}
+
+/* Set cấu hình thẻ a */
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Set cấu hình thẻ span */
+span{
+    margin-left: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+}
+
+/* Set cấu hình thẻ div */
+div{
+    position: relative;
+    margin-bottom: 20px;
+    height: 30px;
+    text-align: left;
+    overflow: hidden;
+    padding: 5px 5px 0 5px;
+    border-radius: 5px;
+}
+
+/* Animation bật side-bar ra khi di chuột vào */
+.side-bar:hover{
+    width: 200px;
+    transition: .5s;
+    border-radius: 0;
+}
+
+/* Animation thu side-bar lại khi di chuột ra */
+.side-bar:not(:hover){
+    transition: .4s;
+}
+
+/* Set thanh bar dưới thẻ a và hiệu ứng bật ra */
+a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    margin-top: 5px;
+    visibility: hidden;
+    transition: .4s;
+}
+
+/* Set animation hiển thị thẻ div và thanh bar bên dưới khi rê chuột vào */
+.side-bar:hover div a::after{
+    visibility: visible; /*thuộc tính hiển thị thanh bar và*/
+    transition: .4s;
+}
+
+/* Set animation hiển thị màu back-ground kế bên side-bar khi di chuột vào */
+div:hover{
+    background-color: rgb(40,39,39);
+}
+
+/* Set animation thanh bar bên dưới chuyển màu khi di chuột vào */
+div:hover > a::after{
+    background-color: aqua;
+}
+

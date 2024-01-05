@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.email{
+    margin-bottom: 15px;
+}
+
+.email > p{
+    margin-bottom: 5px;
+    color: rgb(51, 50, 50);
+}
+
+.email > input{
+    font-size: 15px; 
+    width: 280px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+.password{
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.password > input{
+    font-size: 15px; 
+    width: 280px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+.p-viewer{
+    z-index: 9999;
+    position: absolute;
+    top: 55%;
+    right: 10px;
+}
+
+.fa-eye{
+    padding-right: 5px;
+    color: #000;
+    cursor: pointer;
+}
+
+.password > p{
+    margin-bottom: 5px;
+    color: rgb(51,50,50);
+}
+
+.re-for_pwd {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px 0px;
+}
+
+.re_pwd{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.re_pwd > p{
+    margin-right: 50px;
+    font-weight:600;
+}
+
+.re_pwd > input{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.for_pwd > a{
+    color: red;
+    text-decoration: none;
+}
+
+.sign-in > button{
+    margin-top: 20px;
+    width: 280px;
+    height: 40px;
+    border: none;
+    background-color: rgb(20, 119, 218);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

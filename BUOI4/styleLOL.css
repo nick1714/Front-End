@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set cấu hình container */
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #dcf6f8;
+}
+
+/* Set cấu hình 2 card */
+.container .card {
+    position: relative;
+    width: 500px;
+    height: 230px;
+    padding: 15px;
+    background: linear-gradient(60deg, #151516 0%, #1d2229 100%);
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Set cấu hình thẻ h2 */
+.container .card h2 {
+    z-index: 99;
+    position: absolute;
+    bottom: 25px;
+    right: 130px;
+    font-size: 50px;
+    font-weight: 700;
+    color: #FFF;
+    pointer-events: none;
+    transition: 0.2s ease;
+    text-shadow: e 0 15px rgba(0, 0, 0, 0.5);
+}
+  
+/* Set cấu hình thẻ p */
+.container .card p {
+    z-index: 99;
+    position: absolute;
+    bottom: 30px;
+    right: 130px;
+    width: 150px;
+    color: #fff;
+    opacity: 0;
+    font-size: 12px;
+    text-align: right;
+    letter-spacing: 1px;
+    transition: 0.2s ease;
+}
+
+/* Set cấu hình thẻ span */
+.container .card span {
+    z-index: 99;
+    position: absolute;
+    top: 60px;
+    right: 35px;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    writing-mode: vertical-lr;
+    transition: 0.2s ease;
+    opacity: 0.7;
+}
+
+/* Set cấu hình class pic và animation */
+.container .card .pic {
+    z-index: 100;
+    width: 395px;
+    height: 200px;
+    background-image: url("./image/jinx.jpg");
+    background-size: cover;
+    border-radius: 12px;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}  
+
+/* Set cấu hình thẻ button và animation */
+.container .card button {
+    position: absolute;
+    right: 30px;
+    bottom: 40px;
+    width: 30px;
+    height: 30px;
+    background-color: #772a9b;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+/* Set animation button khi card được rê chuột vào */
+.container .card:hover button {
+    transform: scale(16.5);
+    opacity: 0.5;
+}
+
+/* Set animation h2 khi card được rê chuột vào */
+.container .card:hover h2 {
+    bottom: 80px;
+    right: 50px;
+  }
+
+/* Set animation p khi card được rê chuột vào */
+.container .card:hover p {
+    opacity: 1;
+    right: 60px;
+}
+
+/* Set animation span khi card được rê chuột vào */
+.container .card:hover span {
+    opacity: 0;
+    top: 80px;
+}
+
+/* Set animation class pic khi card được rê chuột vào */
+.container .card:hover .pic {
+    filter: grayscale(0);
+    width: 470px;
+    
+}
+
+/* Set cấu hình class pic của card 2 */
+.container .card2 .pic {
+    background-image: url("./image/yasuo.jpg");
+    transition: 0.3s ease;
+}
+
+/* Set cấu hình thẻ button của card 2 */
+.container .card2 button {
+    background-color: #899de7;
+}  
+  

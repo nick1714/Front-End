@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Tạo khung cho nút */
+.switch{
+    position: relative;
+    width: 60px;
+    height: 35px;
+    display: inline-block;
+}
+
+/* ẩn nút checkbox */
+.switch > input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* Tạo giao diện của nút */
+/* Tạo nền xám cho nút */
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+/* Tạo hiệu ứng bật tắt */
+/* Tạo nút tròn và độ mượt */
+.slider::before{
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -1px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+    border: 1px solid black;
+}
+
+/* chuyển màu xanh khi nhấn */
+input:checked + .slider{
+    background-color: #2196F3;
+}
+
+/* Di chuyển nút tròn khi nhấn */
+input:checked + .slider::before{
+    transform: translateX(26px);
+}

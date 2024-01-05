@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cân ra giữa */
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Set cấu hình thanh menu */
+.menu{
+    border: 1px solid gold;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Set cấu hình icon mũi tên xuống */
+p::after{
+    font-family: 'fontawesome';
+    content: '\f078';
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    transition: .5s;
+}
+
+/* Set cấu hình menu thả xuống */
+.drop-down{
+    border: 1px solid gold;
+    width: 100px;
+    padding: 5px;
+    padding-top: 10px;
+    display: none; /*tắt hiển thị khung menu thả xuống*/
+    transition: .5s;
+}
+
+/* Set cấu hình từng khung div (các option)*/
+.drop-down > div{
+    margin-bottom: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+span{
+    margin-left: 10px;
+}
+
+/* Set animation menu thả xuống khi di chuột vào */
+.container:hover .drop-down{
+    transition: .5s;
+    display: block;
+}
+
+/* Set cấu hình icon mũi tên lên khi di chuột vào */
+.container:hover p::after{
+    font-family: 'fontawesome';
+    content: "\f077";
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    transition: .5s;
+}
+
+/* Set bo góc menu khi di chuột vào */
+.container:hover .menu{
+    border-radius: 10px 10px 0 0;
+}
+
+/* Set bo góc menu thả xuống khi di chuột vào */
+.container:hover .drop-down{
+    border-radius: 0 0 10px 10px;
+}
+
+/* Set màu chữ các option của menu thả xuống khi di chuột vào */
+.drop-down > div:hover > span{
+    color: rgb(233, 60, 204);
+}
